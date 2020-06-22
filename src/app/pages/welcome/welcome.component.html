@@ -1,0 +1,27 @@
+<div *ngIf="loading"  fxLayout="column" fxLayoutAlign="center center" style="height:100%; backdrop-filter: blur(10px); width:100%; position:absolute; z-index: 100;">
+    <section>
+        <img style="height:100px; width:100px;" src="assets/img/GIF/3.gif">
+    </section>
+    <section>
+        <p style="color:white;">Loading...</p>
+    </section>
+    
+
+</div>
+
+<div class="wrapper">
+    <div class="page-header clear-filter" >
+      <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header.jpg');">
+  
+      </div>
+        <div class="container">
+            <div class="content-center brand">
+                <img (load)="imageLoaded()" class="n-logo" src="assets/img/logoOwl2.png" alt="">
+                <h1 class="h1-seo">Online Owl Education</h1>
+                <h3>Reach for the sky</h3>
+                <button role="link" type="button" [routerLink]="['/landing']" routerLinkActive="router-link-active"  class="btn btn-success"><i class="fa fa-tv"></i> Start Learning</button>
+            </div>
+            
+        </div>
+    </div>
+    </div>

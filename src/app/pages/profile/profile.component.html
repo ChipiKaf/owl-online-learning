@@ -1,0 +1,133 @@
+<div *ngIf="loading"  fxLayout="column" fxLayoutAlign="center center" style="height:100%; backdrop-filter: blur(10px); width:100%; position:absolute; z-index: 100;">
+    <section>
+        <img style="height:100px; width:100px;" src="assets/img/GIF/3.gif">
+    </section>
+    <section>
+        <p style="color:white;">Setting up...</p>
+    </section>
+    
+
+</div>
+
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg5.jpg') ;">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <div class="photo-container">
+                    <img (load)="imageLoaded()" src="../../../assets/img/pp.png" alt="">
+                </div>
+                <h3 class="title">{{localUser.displayName}}</h3>
+                <!-- <p class="category">Photographer</p> -->
+                <div class="content">
+                    <div class="social-description">
+                        <h2>{{localUser.followers.length}}</h2>
+                        <p>Followers</p>
+                    </div>
+                    <div class="social-description">
+                        <h2>{{localUser.followers.length}}</h2>
+                        <p>Following</p>
+                    </div>
+                    <!-- <div class="social-description">
+                        <h2>48</h2>
+                        <p>Bookmarks</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+          <div class="button-container">
+              <a style="color:white;" class="btn btn-primary btn-round btn-lg">Create Teaching Channel</a>
+              <a  routerLinkActive="active" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
+                <div style="width:100%; height:100%;" fxLayout fxLayoutAlign="center center">
+                    <section>
+                            <i style="font-size:2rem; color: white;" class="fa fa-cog"></i>
+                    </section>
+                       
+                </div>
+
+              </a>
+              
+              <!-- <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
+                <i class="fab fa-instagram"></i>
+              </a> -->
+          </div>
+          <h3 class="title">About me</h3>
+          <h5 class="description">An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</h5>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="title text-center">My Portfolio</h4>
+                      <ngb-tabset [justify]="'center'" type="pills" class="nav nav-pills nav-pills-primary  nav-pills-just-icons justify-content-center tab-space">
+                          <ngb-tab>
+                            <ng-template ngbTabTitle>
+                              <i class="now-ui-icons design_image"></i>
+                            </ng-template>
+                              <ng-template ngbTabContent>
+                                <div class="row">
+                                  <div class="col-md-10 ml-auto mr-auto">
+                                      <div class="row collections">
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg1.jpg" alt="" class="img-raised">
+                                              <img src="assets/img/bg3.jpg" alt="" class="img-raised">
+                                          </div>
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg8.jpg" alt="" class="img-raised">
+                                              <img src="assets/img/bg7.jpg" alt="" class="img-raised">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </ng-template>
+                          </ngb-tab>
+                          <ngb-tab>
+                            <ng-template ngbTabTitle>
+                              <i class="now-ui-icons location_world"></i>
+                            </ng-template>
+                              <ng-template ngbTabContent>
+                                <div class="row">
+                                  <div class="col-md-10 ml-auto mr-auto">
+                                      <div class="row collections">
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg6.jpg" class="img-raised">
+                                              <img src="assets/img/bg11.jpg" alt="" class="img-raised">
+                                          </div>
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg7.jpg" alt="" class="img-raised">
+                                              <img src="assets/img/bg8.jpg" alt="" class="img-raised">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </ng-template>
+                          </ngb-tab>
+                          <ngb-tab>
+                            <ng-template ngbTabTitle>
+                              <i class="now-ui-icons sport_user-run"></i>
+                            </ng-template>
+                              <ng-template ngbTabContent>
+                                <div class="row">
+                                  <div class="col-md-10 ml-auto mr-auto">
+                                      <div class="row collections">
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg3.jpg" alt="" class="img-raised">
+                                              <img src="assets/img/bg8.jpg" alt="" class="img-raised">
+                                          </div>
+                                          <div class="col-md-6">
+                                              <img src="assets/img/bg7.jpg" alt="" class="img-raised">
+                                              <img src="assets/img/bg6.jpg" class="img-raised">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </ng-template>
+                          </ngb-tab>
+                      </ngb-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,97 @@
+<nav #navbar class="navbar navbar-expand-lg fixed-top bg-white" >
+    <div class="container">
+      <div class="dropdown button-dropdown">
+        <div ngbDropdown>
+          <a class="dropdown-toggle" ngbDropdownToggle>
+              <span class="button-bar"></span>
+              <span class="button-bar"></span>
+              <span class="button-bar"></span>
+          </a>
+           <div ngbDropdownMenu>
+             <a class="dropdown-header">Dropdown header</a>
+             <a class="dropdown-item" href="#">Action</a>
+             <a class="dropdown-item" href="#">Another action</a>
+             <a class="dropdown-item" href="#">Something else here</a>
+             <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#">Separated link</a>
+             <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#">One more separated link</a>
+           </div>
+         </div>
+      </div>
+        <div class="navbar-translate">
+            <a class="navbar-brand" [routerLink]="['/index']" placement="bottom" >
+                Online Owl
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
+
+            <ul class="navbar-nav ml-auto">
+              
+                <li *ngIf="!navbarState"  class="nav-item">
+                    <a class="nav-link btn btn-info" [routerLink]="['/login']" >
+                        <i class="now-ui-icons arrows-1_share-66"></i>
+                        <p>LOGIN</p>
+                    </a>
+                </li>
+                <li *ngIf="!navbarState" class="nav-item">
+                    <a class="nav-link btn btn-success" [routerLink]="['/signup']">
+                        <i class="now-ui-icons arrows-1_share-66"></i>
+                        <p>SIGN UP</p>
+                    </a>
+                </li>
+                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="#pablo">
+                              <i class="now-ui-icons media-2_sound-wave"></i>
+                              <p>
+                                <span class="d-lg-none d-md-block">Stats</span>
+                              </p>
+                            </a>
+                          </li>
+                          <li class="nav-item" ngbDropdown>
+                            <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
+                              <i class="now-ui-icons location_world"></i>
+                              <p>
+                                <span class="d-lg-none d-md-block">Some Actions</span>
+                              </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                          </li> -->
+                          <li class="nav-item">
+                                <a class="nav-link" href="#pablo" [routerLink]="['/landing']" >
+                                  <i class="now-ui-icons tech_tv"></i>
+                                  <p>
+                                    <span class="d-lg-none d-md-block">Learn</span>
+                                  </p>
+                                </a>
+                              </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="#pablo" [routerLink]="['/profile']">
+                              <i class="now-ui-icons users_single-02"></i>
+                              <p>
+                                <span class="d-lg-none d-md-block">Profile</span>
+                              </p>
+                            </a>
+                          </li>
+                          <li *ngIf="navbarState"  class="nav-item">
+                                <a (click)="logout()" role="button" class="nav-link" href="#pablo">
+                                        <i class="now-ui-icons sport_user-run"></i>
+                                        <p>
+                                          <span class="d-lg-none d-md-block">Logout</span>
+                                        </p>
+                                      </a>
+                            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
